@@ -1,7 +1,8 @@
 // components/KeyFeatures.jsx
-"use client"; // This directive is necessary for client-side features like framer-motion
+"use client"; // This directive is necessary for client-side features like framer-motion (will be removed if no other client-side features are used)
 
-import { motion } from "framer-motion";
+// Removed motion import since animations are no longer used
+// import { motion } from "framer-motion";
 
 const KeyFeatures = () => {
   const features = [
@@ -28,23 +29,17 @@ const KeyFeatures = () => {
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
+        {/* Section Title - now a standard h2 */}
         <h2 className="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-12 md:mb-16">
           Committed to Your Well-being
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
           {features.map((feature, index) => (
-            <motion.div
+            <div // Changed from motion.div to standard div
               key={index}
               className="bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden
                          h-[50vh] flex flex-col" // Added h-[50vh] for height and flex-col for layout
-              whileHover={{
-                scale: 1.03,
-                y: -7,
-                boxShadow:
-                  "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.04)",
-              }}
-              transition={{ duration: 0.2 }}
             >
               <img
                 src={feature.image}
@@ -58,7 +53,7 @@ const KeyFeatures = () => {
                 </h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

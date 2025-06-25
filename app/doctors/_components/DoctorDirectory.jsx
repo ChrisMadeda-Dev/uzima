@@ -37,50 +37,50 @@ const doctors = [
   {
     name: "Alice Johnson",
     specialty: "Cardiology",
-    photo: "/images/blank_dp.jpeg", // Updated image source
+    photo: "/images/dp.jpg", // Updated image source
     bio: "Specializing in heart conditions and cardiovascular health.",
   },
   {
     name: "Robert Smith",
     specialty: "Pediatrics",
-    photo: "/images/blank_dp.jpeg", // Updated image source
+    photo: "/images/dp.jpg", // Updated image source
     bio: "Dedicated to the health and well-being of children from birth through adolescence.",
   },
   {
     name: "Maria Garcia",
     specialty: "Orthopedics",
-    photo: "/images/blank_dp.jpeg", // Updated image source
+    photo: "/images/dp.jpg", // Updated image source
     bio: "Expert in musculoskeletal system, including bones, joints, ligaments, tendons, and muscles.",
   },
   {
     name: "David Lee",
     specialty: "Emergency Medicine",
-    photo: "/images/blank_dp.jpeg", // Updated image source
+    photo: "/images/dp.jpg", // Updated image source
     bio: "Highly skilled in acute care, providing immediate medical attention for urgent conditions.",
   },
   // --- Additional Doctors ---
   {
     name: "Sophia Brown",
     specialty: "Neurology",
-    photo: "/images/blank_dp.jpeg",
+    photo: "/images/dp.jpg", // Updated image source
     bio: "Focuses on disorders of the brain, spinal cord, and nervous system.",
   },
   {
     name: "James Wilson",
     specialty: "Dermatology",
-    photo: "/images/blank_dp.jpeg",
+    photo: "/images/dp.jpg", // Updated image source
     bio: "Specializes in conditions of the skin, hair, and nails.",
   },
   {
     name: "Olivia Martinez",
     specialty: "Oncology",
-    photo: "/images/blank_dp.jpeg",
+    photo: "/images/dp.jpg", // Updated image source
     bio: "Provides comprehensive care and treatment for cancer patients.",
   },
   {
     name: "Daniel Taylor",
     specialty: "General Surgery",
-    photo: "/images/blank_dp.jpeg",
+    photo: "/images/dp.jpg", // Updated image source
     bio: "Experienced in a wide range of surgical procedures for various medical conditions.",
   },
 ];

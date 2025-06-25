@@ -113,12 +113,24 @@ const Navbar = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            className="md:hidden fixed inset-0 bg-blue-600 z-[999] flex flex-col p-8" // Removed items-center and justify-center. Increased padding.
+            className="md:hidden fixed inset-0 bg-blue-600 z-[999] flex flex-col items-start justify-center p-8" // Changed items-center to items-start for left alignment of the whole block
             initial="hidden"
             animate="visible"
             exit="exit"
             variants={mobileMenuVariants}
           >
+            {/* Mobile Menu Title */}
+            <Link
+              href="/home"
+              onClick={handleLinkClick} // Close menu when title is clicked
+              className="absolute top-4 left-4 text-3xl font-bold text-white rounded-lg
+                         transition-colors duration-200 p-2
+                         focus:outline-none focus:ring-2 focus:ring-blue-300 z-10" // Ensure it's above other elements
+            >
+              Uzima Hospital
+            </Link>
+
+            {/* Mobile Menu Close Button */}
             <div className="absolute top-4 right-4">
               <button
                 onClick={toggleMobileMenu}
@@ -128,18 +140,20 @@ const Navbar = () => {
                 <FaTimes />
               </button>
             </div>
-            <ul className="flex flex-col space-y-6 mt-16 w-full">
+
+            {/* Mobile Menu Links */}
+            <ul className="flex flex-col space-y-6 mt-20 w-full items-start">
               {" "}
-              {/* Added mt-16 for space below close button, and w-full */}
+              {/* Removed justify-center here, added items-start */}
               {navLinks.map((link) => (
                 <li key={link.name} className="w-full">
                   {" "}
-                  {/* Make list items take full width */}
+                  {/* Removed flex justify-center from list items */}
                   {link.type === "button" ? (
                     <Link
                       href={link.href}
                       onClick={handleLinkClick}
-                      className="block w-full text-left py-3 px-6 rounded-full text-lg
+                      className="block text-left py-3 px-6 rounded-full text-lg
                                  bg-white text-blue-700 font-semibold
                                  transition-colors duration-200
                                  hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"

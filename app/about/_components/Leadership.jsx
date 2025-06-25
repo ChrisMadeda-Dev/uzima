@@ -7,29 +7,25 @@ const leadershipMembers = [
   {
     name: "Dr. Anya Sharma",
     title: "Chief Executive Officer",
-    // Changed image source to local path
-    photo: "/images/blank_dp.jpeg",
+    photo: "/images/dp.jpg", // Changed to dp.jpg
     bio: "Dr. Sharma has over 20 years of experience in healthcare administration and is passionate about patient advocacy and innovative medical practices. Her leadership drives Uzima's commitment to excellence.",
   },
   {
     name: "Prof. Ben Carter",
     title: "Chief Medical Officer",
-    // Changed image source to local path
-    photo: "/images/blank_dp.jpeg",
+    photo: "/images/dp.jpg", // Changed to dp.jpg
     bio: "Prof. Carter is a renowned surgeon and clinical leader, dedicated to advancing medical research and ensuring the highest standards of clinical care across all departments.",
   },
   {
     name: "Ms. Carol Kimani",
     title: "Chief Operating Officer",
-    // Changed image source to local path
-    photo: "/images/blank_dp.jpeg",
+    photo: "/images/dp.jpg", // Changed to dp.jpg
     bio: "Ms. Kimani brings extensive experience in operational efficiency and strategic planning, ensuring Uzima Hospital runs smoothly and effectively to serve our patients.",
   },
   {
     name: "Dr. David Mumo",
     title: "Head of Nursing",
-    // Changed image source to local path
-    photo: "/images/blank_dp.jpeg",
+    photo: "/images/dp.jpg", // Changed to dp.jpg
     bio: "Dr. Mumo leads our dedicated nursing team, fostering a culture of compassionate care and continuous professional development for all nursing staff.",
   },
 ];
@@ -64,13 +60,12 @@ const Leadership = () => {
         </motion.h2>
 
         {/* Leadership Team Grid */}
-        {/* Changed lg:grid-cols-3 to lg:grid-cols-4 to fit all 4 cards in one row on desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 justify-items-center">
           {leadershipMembers.map((member, index) => (
             <motion.div
               key={index}
               className="bg-white p-6 md:p-8 rounded-lg shadow-md text-center
-                         flex flex-col items-center justify-start h-full max-w-sm w-full"
+                           flex flex-col items-center justify-start h-full max-w-sm w-full"
               // Framer Motion entry animation
               variants={cardEntryVariants}
               initial="initial"
@@ -88,7 +83,7 @@ const Leadership = () => {
             >
               {/* Photo */}
               <img
-                src={member.photo} // This is now using the local image path
+                src={member.photo} // This now consistently uses the dp.jpg path
                 alt={`Photo of ${member.name}`}
                 className="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-blue-500"
               />

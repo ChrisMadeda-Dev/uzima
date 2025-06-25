@@ -11,7 +11,7 @@ const Hero = () => {
                    h-[90svh] bg-cover bg-top max-sm:bg-center
                    shadow-2xl
                    "
-      style={{ backgroundImage: "url('/images/1.jpg')" }} // Background image source
+      style={{ backgroundImage: "url('/images/d1.jpg')" }} // Background image source
     >
       <div className="container mx-auto px-6 text-center z-10">
         <motion.h1
@@ -57,7 +57,7 @@ const Hero = () => {
       </div>
 
       {/* Blue overlay with 70% opacity added above the background image */}
-      <div className="absolute inset-0 bg-black opacity-53 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-black opacity-47 pointer-events-none"></div>
     </div>
   );
 };
