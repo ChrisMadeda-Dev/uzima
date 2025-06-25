@@ -12,7 +12,7 @@ const KeyFeatures = () => {
         "Leveraging state-of-the-art facilities and a team of experienced medical professionals to deliver superior care.",
     },
     {
-      image: "/images/1.jpg", // All images now use this path
+      image: "/images/s1.jpg", // All images now use this path
       title: "Genuine Compassion",
       description:
         "Our patient-centered approach ensures your comfort and recovery are at the heart of everything we do.",

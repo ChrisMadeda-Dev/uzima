@@ -39,18 +39,11 @@ const CTA = () => {
           {/* Headline Animation - Retained */}
           <motion.h2
             variants={itemVariants}
-            className="text-3xl md:text-6xl font-bold mb-0 leading-tight"
+            className="text-3xl md:text-6xl font-bold mb-7 leading-tight"
           >
             Need to Schedule a Visit?
           </motion.h2>
 
-          {/* Sub-headline Animation - Added here! */}
-          <motion.p
-            variants={itemVariants}
-            className="text-lg opacity-90 max-w-2xl mx-auto mb-10" // Styling for the sub-headline
-          >
-            Schedule your next appointment with ease.
-          </motion.p>
 
           {/* Single Button Call-to-action - Retained */}
           <motion.div variants={itemVariants} className="flex justify-center">

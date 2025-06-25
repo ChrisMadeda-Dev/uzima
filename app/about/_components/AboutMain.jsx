@@ -36,15 +36,11 @@ const AboutMain = () => {
           viewport={fadeInVariants.viewport}
           transition={{ ...fadeInVariants.transition, delay: 0.2 }} // Added a slight delay for text
         >
-          Uzima Hospital has been a pillar of health in our community since its
-          establishment in 1990. We are dedicated to providing exceptional
-          medical care with a steadfast focus on patient well-being, innovation,
-          and compassion. Our journey began with a commitment to accessible
-          healthcare for all, evolving into a leading institution renowned for
-          its comprehensive services and caring environment. We continually
-          strive to integrate cutting-edge medical practices with a holistic
-          approach to patient care, ensuring every individual receives the
-          highest standard of treatment and support.
+          Uzima Hospital, established in 1990, is a community health pillar. We
+          are dedicated to providing exceptional, compassionate, and innovative
+          medical care with a steadfast focus on patient well-being. Our
+          commitment to accessible healthcare has evolved into a leading
+          institution renowned for comprehensive services.
         </motion.p>
 
         {/* Image Section */}
@@ -60,7 +56,7 @@ const AboutMain = () => {
             <img
               src="/images/b1.jpg"
               alt="Uzima Hospital Building"
-              className="w-full h-auto object-cover rounded-lg shadow-md"
+              className="w-full h-64 md:h-80 object-cover object-top rounded-lg shadow-md" // Added fixed height and responsive height
             />
           </motion.div>
           {/* Image 2 */}
@@ -74,7 +70,7 @@ const AboutMain = () => {
             <img
               src="/images/s2.jpg"
               alt="Caring Medical Staff"
-              className="w-full h-auto object-cover rounded-lg shadow-md"
+              className="w-full h-64 md:h-80 object-cover rounded-lg shadow-md" // Added fixed height and responsive height
             />
           </motion.div>
         </div>

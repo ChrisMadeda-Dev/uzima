@@ -86,18 +86,18 @@ const ServicesHighlights = () => {
               <div className="flex justify-center items-center bg-blue-50 p-4 rounded-full mb-6">
                 {service.icon}
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-gray-700 mb-3">
+              <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-3">
                 {service.name}
               </h3>
-              <p className="text-gray-600 text-md leading-relaxed mb-6 flex-grow">
+              <p className="text-gray-700 text-md leading-relaxed mb-6 flex-grow">
                 {service.description}
               </p>
               {/* Updated to use Next.js Link for dynamic pages */}
               <Link
                 href={`/services/${service.slug}`} // Link to the dynamic service detail page
-                className="text-blue-600 font-semibold text-md hover:text-blue-800 transition-colors duration-200"
+                className="text-gray-500 text-sm hover:text-blue-800 transition-colors duration-200"
               >
-                Learn More &rarr;
+                learn more &rarr;
               </Link>
             </motion.div>
           ))}

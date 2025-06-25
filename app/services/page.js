@@ -157,8 +157,7 @@ const ServicesList = () => {
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
           >
             At Uzima Hospital, we offer a wide range of specialized medical
-            services, delivered by experienced professionals using advanced
-            technology. Explore our departments below to find the care you need.
+            services. Explore our departments below to find the care you need.
           </motion.p>
 
           {/* Service Categories/Navigation (Illustrative) */}

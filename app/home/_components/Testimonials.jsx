@@ -48,18 +48,16 @@ const Testimonials = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white p-8 rounded-lg shadow-xl flex flex-col justify-between
-                         border-l-8 border-blue-600" // NEW DESIGN: Strong left border
+              className="bg-white p-8 rounded-lg shadow-xl flex flex-col justify-between" // Removed border-l-8 border-blue-600
             >
-              {/* NEW DESIGN: Small, inline quote icon */}
+              {/* Small, inline quote icon */}
               <div className="mb-4">
                 <FaQuoteLeft className="text-3xl text-blue-500" />
               </div>
 
-              {/* Quote Text - Normal size, left-aligned, no background icon */}
+              {/* Quote Text */}
               <p className="italic text-lg text-gray-800 leading-relaxed mb-6">
                 {" "}
-                {/* IMPROVED: Text size to normal, removed absolute positioning and center align */}
                 {testimonial.quote}
               </p>
               <p className="font-semibold text-gray-600 text-right">

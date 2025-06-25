@@ -8,18 +8,17 @@ const Hero = () => {
   return (
     <div
       className="w-full relative overflow-hidden flex items-center justify-center
-                   h-screen {/* Changed height to h-screen to fit viewport */}
-                   bg-cover bg-top-left
+                   h-[90svh] bg-cover bg-top max-sm:bg-center
                    shadow-2xl
                    "
-      style={{ backgroundImage: "url('/images/bg.jpg')" }} // Background image source
+      style={{ backgroundImage: "url('/images/1.jpg')" }} // Background image source
     >
       <div className="container mx-auto px-6 text-center z-10">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-4xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-none mb-6 drop-shadow-lg"
+          className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-none mb-6 drop-shadow-lg"
         >
           Uzima Hospital
           <br />
@@ -58,7 +57,7 @@ const Hero = () => {
       </div>
 
       {/* Blue overlay with 70% opacity added above the background image */}
-      <div className="absolute inset-0 bg-black opacity-37 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-black opacity-53 pointer-events-none"></div>
     </div>
   );
 };
