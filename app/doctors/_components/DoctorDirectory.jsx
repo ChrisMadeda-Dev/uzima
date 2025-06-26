@@ -105,55 +105,43 @@ const DoctorDirectory = () => {
   };
 
   return (
-    <section
-      id="doctor-directory"
-      className="py-16 md:py-20 lg:py-24 bg-gray-50"
-    >
-      <div className="container mx-auto px-4">
-        {/* Section Title */}
+    <>
+      {/* New Header Section for Doctors Page */}
+      <div className="bg-blue-600 py-16 md:py-20 lg:py-24 text-center">
         <motion.h2
-          className="text-center text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 md:mb-10"
+          className="text-4xl md:text-5xl font-bold text-white" // Changed text color to white for contrast
           initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          Meet Our Medical Team
+          Our Doctors
         </motion.h2>
-
-        {/* Introductory Paragraph */}
-        <motion.p
-          className="text-center text-lg text-gray-700 max-w-3xl mx-auto mb-12 md:mb-16 leading-relaxed"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
-        >
-          Our dedicated team of highly skilled doctors is committed to providing
-          exceptional care. Browse our specialists below to learn more about
-          their expertise.
-        </motion.p>
-
-        {/* Removed Search/Filter Bar from here */}
-
-        {/* Doctor Cards Container */}
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.1 }}
-        >
-          {doctors.map((doctor, index) => (
-            <DoctorCardPlaceholder
-              key={index} // Using index as key is acceptable for static lists without reordering
-              doctor={doctor}
-              variants={itemVariants}
-            />
-          ))}
-        </motion.div>
       </div>
-    </section>
+
+      <section
+        id="doctor-directory"
+        className="py-16 md:py-20 lg:py-24 bg-gray-50" // Adjusted padding to remove redundant top padding
+      >
+        <div className="container mx-auto px-4">
+          {/* Doctor Cards Container */}
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.1 }}
+          >
+            {doctors.map((doctor, index) => (
+              <DoctorCardPlaceholder
+                key={index} // Using index as key is acceptable for static lists without reordering
+                doctor={doctor}
+                variants={itemVariants}
+              />
+            ))}
+          </motion.div>
+        </div>
+      </section>
+    </>
   );
 };
 

@@ -56,7 +56,6 @@ const servicesList = [
       "Compassionate medical care dedicated to the health and well-being of infants, children, and adolescents.",
     slug: "pediatrics",
   },
- 
   {
     id: "pharmacy",
     name: "Pharmacy Services",
@@ -132,57 +131,24 @@ const ServicesList = () => {
 
   return (
     <>
+      {/* New Header Section for Services Page */}
+      <div className="bg-blue-600 py-16 md:py-20 lg:py-24 text-center">
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold text-white" // Changed text color to white for contrast
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
+          Our Services
+        </motion.h2>
+      </div>
+
       <section
         id="services-list"
-        className="py-16 md:py-20 lg:py-24 bg-gray-50"
+        className="py-16 md:py-20 lg:py-24 bg-gray-50" // Adjusted padding to remove redundant top padding
       >
         <div className="container mx-auto px-4">
-          {/* Page Title */}
-          <motion.h2
-            className="text-center text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 md:mb-10"
-            initial={{ opacity: 0, y: -50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-          >
-            Our Comprehensive Medical Services
-          </motion.h2>
-
-          {/* Introductory Paragraph */}
-          <motion.p
-            className="text-center text-lg text-gray-700 max-w-3xl mx-auto mb-12 md:mb-16 leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
-          >
-            At Uzima Hospital, we offer a wide range of specialized medical
-            services. Explore our departments below to find the care you need.
-          </motion.p>
-
-          {/* Service Categories/Navigation (Illustrative) */}
-          <motion.div
-            className="flex flex-wrap justify-center gap-3 mb-12 md:mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
-          >
-            {[
-              "Medical Specialties",
-              "Surgical Services",
-              "Diagnostic Services",
-              "Preventive Care",
-            ].map((category, idx) => (
-              <span
-                key={idx}
-                className="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full cursor-pointer
-                         hover:bg-blue-200 transition-colors duration-200"
-              >
-                {category}
-              </span>
-            ))}
-          </motion.div>
+          {/* Removed Page Title from here as it's now in a separate header div */}
 
           {/* Service Cards Container */}
           <motion.div
@@ -196,15 +162,11 @@ const ServicesList = () => {
               const IconComponent = iconComponents[service.icon]; // Dynamically get the icon component
 
               return (
-                // This acts as a placeholder for your future ServiceCard component
-                // You would replace this motion.div with <ServiceCard ... />
                 <motion.div
                   key={service.id}
                   className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300
-                           transform hover:-translate-y-1 flex flex-col items-center text-center border border-gray-100"
+                             transform hover:-translate-y-1 flex flex-col items-center text-center border border-gray-100"
                   variants={itemVariants}
-                  // whileHover={{ scale: 1.03, boxShadow: "0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05)" }} // Optional hover for cards
-                  // transition={{ duration: 0.2 }} // Optional hover transition
                 >
                   {/* Service Icon */}
                   <div className="text-blue-500 mb-4 p-3 bg-blue-50 rounded-full">
@@ -232,7 +194,7 @@ const ServicesList = () => {
           </motion.div>
         </div>
       </section>
-      <CTA/>
+      <CTA />
     </>
   );
 };

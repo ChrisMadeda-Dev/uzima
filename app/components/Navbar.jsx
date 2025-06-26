@@ -1,7 +1,7 @@
 // components/Navbar.jsx
 "use client"; // This directive is necessary for client-side features like framer-motion and useState
 
-import React, { useState } from "react"; // CORRECTED LINE HERE
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa"; // Importing icons for the mobile menu
 import Link from "next/link"; // Import Link for Next.js page navigation
@@ -53,9 +53,9 @@ const Navbar = () => {
         {/* Hospital Logo/Name */}
         <Link
           href="/home"
-          className="text-3xl md:text-4xl text-white rounded-lg
-                         transition-colors duration-200 p-2
-                         hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
+          className="text-2xl md:text-3xl text-white rounded-lg
+                             transition-colors duration-200 p-2 font-extrabold
+                             hover:text-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300" /* Changed hover:bg-blue-600 to hover:text-blue-200 */
         >
           <motion.span // Apply motion directly to the span or div inside Link
             whileHover={{ scale: 1.02 }}
@@ -119,19 +119,19 @@ const Navbar = () => {
             exit="exit"
             variants={mobileMenuVariants}
           >
-            {/* Mobile Menu Title */}
-            <Link
-              href="/home"
-              onClick={handleLinkClick} // Close menu when title is clicked
-              className="absolute top-4 left-4 text-3xl  text-white rounded-lg
-                         transition-colors duration-200 p-2
-                         focus:outline-none focus:ring-2 focus:ring-blue-300 z-10"
-            >
-              Uzima Hospital
-            </Link>
+            {/* Mobile Menu Header: Title and Close Button */}
+            <div className="absolute top-4 w-full flex justify-between items-center px-4">
+              <Link
+                href="/home"
+                onClick={handleLinkClick} // Close menu when title is clicked
+                className="text-2xl text-white rounded-lg
+                               transition-colors duration-200 p-2 font-extrabold
+                               focus:outline-none focus:ring-2 focus:ring-blue-300 z-10
+                               underline decoration-blue-300 decoration-2" // Underline added here
+              >
+                Uzima Hospital
+              </Link>
 
-            {/* Mobile Menu Close Button */}
-            <div className="absolute top-4 right-4">
               <button
                 onClick={toggleMobileMenu}
                 className="text-3xl text-white focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-md p-2"
@@ -150,9 +150,9 @@ const Navbar = () => {
                       href={link.href}
                       onClick={handleLinkClick}
                       className="block text-left py-3 px-6 rounded-full text-lg
-                                 bg-white text-blue-700 font-semibold
-                                 transition-colors duration-200
-                                 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+                                   bg-white text-blue-700 font-semibold
+                                   transition-colors duration-200
+                                   hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
                     >
                       {link.name}
                     </Link>
@@ -161,9 +161,9 @@ const Navbar = () => {
                       href={link.href}
                       onClick={handleLinkClick}
                       className="block p-3 text-white text-xl rounded-lg text-left
-                                 transition-colors duration-200
-                                 hover:bg-blue-700 hover:text-white
-                                 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
+                                   transition-colors duration-200 font-semibold
+                                   hover:bg-blue-700 hover:text-white
+                                   focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
                     >
                       {link.name}
                     </Link>

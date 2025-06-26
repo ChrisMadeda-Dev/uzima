@@ -9,7 +9,7 @@ const AboutMain = () => {
     initial: { opacity: 0, y: 50 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6, ease: "easeOut" },
-    viewport: { once: true, amount: 0.4 }, // Animate when 40% of the element is visible
+    // Removed viewport from here as it's now applied per element where needed (only on scroll-based)
   };
 
   return (
@@ -20,20 +20,20 @@ const AboutMain = () => {
           className="text-center text-4xl md:text-5xl font-extrabold text-gray-900 mb-12"
           variants={fadeInVariants}
           initial="initial"
-          whileInView="animate"
-          viewport={fadeInVariants.viewport}
+          whileInView="animate" // Keep this for the title to animate on scroll
+          viewport={{ once: true, amount: 0.4 }} // Explicitly add viewport for this element
           transition={fadeInVariants.transition}
         >
-          About Uzima Hospital
+          About Us
         </motion.h2>
 
         {/* Main Text Block */}
         <motion.p
-          className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto text-center leading-relaxed mb-16"
+          className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto text-center leading-relaxed mb-16 max-sm:text-justify"
           variants={fadeInVariants}
           initial="initial"
-          whileInView="animate"
-          viewport={fadeInVariants.viewport}
+          whileInView="animate" // Keep this for the paragraph to animate on scroll
+          viewport={{ once: true, amount: 0.4 }} // Explicitly add viewport for this element
           transition={{ ...fadeInVariants.transition, delay: 0.2 }} // Added a slight delay for text
         >
           Uzima Hospital, established in 1990, is a community health pillar. We
@@ -49,28 +49,28 @@ const AboutMain = () => {
           <motion.div
             variants={fadeInVariants}
             initial="initial"
-            whileInView="animate"
-            viewport={fadeInVariants.viewport}
+            animate="animate" // Changed from whileInView to animate for on-load animation
+            // Removed viewport prop
             transition={{ ...fadeInVariants.transition, delay: 0.4 }} // Added delay for the first image
           >
             <img
               src="/images/b1.jpg"
               alt="Uzima Hospital Building"
-              className="w-full h-64 md:h-80 object-cover object-top rounded-lg shadow-md" // Added fixed height and responsive height
+              className="w-full h-64 md:h-80 object-cover object-top rounded-lg shadow-md"
             />
           </motion.div>
           {/* Image 2 */}
           <motion.div
             variants={fadeInVariants}
             initial="initial"
-            whileInView="animate"
-            viewport={fadeInVariants.viewport}
+            animate="animate" // Changed from whileInView to animate for on-load animation
+            // Removed viewport prop
             transition={{ ...fadeInVariants.transition, delay: 0.6 }} // Added delay for the second image
           >
             <img
               src="/images/s2.jpg"
               alt="Caring Medical Staff"
-              className="w-full h-64 md:h-80 object-cover rounded-lg shadow-md" // Added fixed height and responsive height
+              className="w-full h-64 md:h-80 object-cover rounded-lg shadow-md"
             />
           </motion.div>
         </div>

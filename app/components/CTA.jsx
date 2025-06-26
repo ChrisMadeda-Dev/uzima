@@ -27,7 +27,7 @@ const CTA = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-blue-700">
+    <section className="py-16 flex items-center justify-center md:py-24 bg-blue-700">
       <div className="container mx-auto px-4">
         <motion.div
           variants={containerVariants}
@@ -39,7 +39,7 @@ const CTA = () => {
           {/* Headline Animation - Retained */}
           <motion.h2
             variants={itemVariants}
-            className="text-3xl md:text-6xl font-bold mb-7 leading-tight"
+            className="text-4xl md:text-6xl font-extrabold mb-7 leading-tight"
           >
             Need to Schedule a Visit?
           </motion.h2>

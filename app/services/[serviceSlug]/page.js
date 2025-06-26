@@ -41,7 +41,7 @@ const ServiceDetail = () => {
           <Link
             href="/services"
             className="inline-block bg-blue-600 text-white py-3 px-8 rounded-lg text-lg font-medium
-                         hover:bg-blue-700 transition-colors duration-200"
+                               hover:bg-blue-700 transition-colors duration-200"
           >
             Back to All Services
           </Link>
@@ -51,20 +51,25 @@ const ServiceDetail = () => {
   }
 
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-white">
-      <div className="container mx-auto px-4">
-        {/* Service Name Title */}
+    <section className="pb-16 md:pb-20 lg:pb-24 bg-white">
+      {/* Service Name Header Section */}
+      <div className="h-[25svh] flex justify-center items-center bg-blue-50 px-4 mb-10">
+        {" "}
+        {/* Added bg-blue-50 and moved layout classes */}
         <motion.h1
-          className="  h-[20svh] text-center text-4xl md:text-5xl font-extrabold text-gray-900"
+          className="text-center text-4xl md:text-5xl font-bold text-gray-900" // Kept text styles
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           {service.name}
         </motion.h1>
+      </div>
 
+      <div className="container mx-auto px-4 mt-8">
+        {" "}
+        {/* Added mt-8 for spacing from the new header */}
         {/* Removed Hero Image section */}
-
         {/* Overview Section */}
         <motion.div
           className="mb-12 md:mb-16"
@@ -74,11 +79,10 @@ const ServiceDetail = () => {
           viewport={sectionFadeInUp.viewport}
         >
           <h2 className="text-3xl font-bold text-blue-600 mb-4">Overview</h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-lg text-gray-700 leading-relaxed max-sm:text-justify ">
             {service.overview}
           </p>
         </motion.div>
-
         {/* Conditions Treated Section */}
         <motion.div
           className="mb-12 md:mb-16"
@@ -99,7 +103,6 @@ const ServiceDetail = () => {
             ))}
           </ul>
         </motion.div>
-
         {/* Treatments & Procedures Section */}
         <motion.div
           className="mb-12 md:mb-16"
@@ -120,7 +123,6 @@ const ServiceDetail = () => {
             ))}
           </ul>
         </motion.div>
-
         {/* Meet Our Specialists (Optional) */}
         <motion.div
           className="bg-blue-50 p-8 rounded-lg shadow-md text-center mb-12 md:mb-16"
@@ -133,18 +135,17 @@ const ServiceDetail = () => {
             Meet Our {service.name.replace(" Services", "")} Specialists
           </h3>
           <p className="text-lg text-gray-700 mb-6">
-            Our team of dedicated and experienced doctors are experts in
+            Our team of experienced doctors are experts in
             providing top-tier care for your specific needs.
           </p>
           <Link
             href="/doctors"
             className="inline-block bg-blue-600 text-white py-3 px-8 rounded-lg text-lg font-medium
-                         hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                               hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             View Our Doctors
           </Link>
         </motion.div>
-
         {/* Information Call to Action (CTA) */}
         <motion.div
           className="bg-gray-100 p-8 rounded-lg shadow-md text-center"
@@ -163,7 +164,7 @@ const ServiceDetail = () => {
           <Link
             href="/contact"
             className="inline-block bg-blue-600 text-white py-3 px-8 rounded-lg text-lg font-medium
-                         hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                               hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             Contact Our Team
           </Link>

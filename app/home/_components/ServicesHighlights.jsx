@@ -74,7 +74,7 @@ const ServicesHighlights = () => {
                 delay: index * 0.1,
                 ease: "easeOut",
               }} // Staggered delay
-              className="bg-white p-8 rounded-lg shadow-lg text-center border border-gray-100 flex flex-col items-center
+              className="bg-white p-6 rounded-lg shadow-lg text-center border border-gray-100 flex flex-col items-center
                          transition-all duration-300 ease-in-out // For smoother transitions between states
                          hover:shadow-xl hover:ring-2 hover:ring-blue-200" // Improved hover effect with ring
               whileHover={{
@@ -101,6 +101,16 @@ const ServicesHighlights = () => {
               </Link>
             </motion.div>
           ))}
+        </div>
+
+        {/* View All Services Link (now a text link) */}
+        <div className="text-center mt-12 md:mt-16">
+          <Link
+            href="/services" // Link to the main services page
+            className="text-lg md:text-xl font-semibold text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200"
+          >
+            View All Services &rarr;
+          </Link>
         </div>
       </div>
     </section>

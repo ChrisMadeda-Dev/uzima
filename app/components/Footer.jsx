@@ -31,23 +31,19 @@ const Footer = () => {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }} // Added a consistent transition
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {" "}
-        {/* Responsive horizontal padding */}
         {/* Main Footer Content - Responsive Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-8 lg:gap-x-16">
           {/* Section 1: Hospital Info & Social Media */}
-          {/* Default to left alignment, only center on xs screens (if needed) or explicitly on md up */}
-          <div className="flex flex-col items-start text-left md:items-start md:text-left">
+          <div className="flex flex-col items-start text-left">
+            {" "}
+            {/* Removed redundant md:items-start md:text-left as items-start and text-left are default for flex-col */}
             <h3 className="font-extrabold text-2xl sm:text-3xl lg:text-4xl mb-4 text-white leading-tight">
               Uzima Hospital
             </h3>
-            <p className="max-w-xs text-sm sm:text-base mb-6">
-              Providing compassionate and comprehensive healthcare services to
-              our community.
-            </p>
-            {/* Social Media Icons - keep flex, but adjust alignment if needed */}
+            {/* Social Media Icons */}
             <div className="flex space-x-4 sm:space-x-5 mb-8">
               <a
                 href="https://facebook.com/uzimahospital"
@@ -89,8 +85,9 @@ const Footer = () => {
           </div>
 
           {/* Section 2: Quick Links */}
-          {/* Default to left alignment, only center on xs screens (if needed) or explicitly on md up */}
-          <div className="flex flex-col items-start text-left md:items-start md:text-left">
+          <div className="flex flex-col items-start text-left">
+            {" "}
+            {/* Removed redundant md:items-start md:text-left */}
             <h3 className="font-bold text-lg sm:text-xl md:text-2xl mb-4 text-white">
               Quick Links
             </h3>
@@ -109,15 +106,16 @@ const Footer = () => {
           </div>
 
           {/* Section 3: Contact Info */}
-          {/* Default to left alignment, only center on xs screens (if needed) or explicitly on md up */}
-          <div className="flex flex-col items-start text-left md:items-start md:text-left">
+          <div className="flex flex-col items-start text-left">
+            {" "}
+            {/* Removed redundant md:items-start md:text-left */}
             <h3 className="font-bold text-lg sm:text-xl md:text-2xl mb-4 text-white">
               Contact Info
             </h3>
             <div className="space-y-4 text-sm sm:text-base">
               <p className="flex items-start">
                 <FaMapMarkerAlt className="mr-3 text-xl flex-shrink-0 mt-0.5" />
-                123 Healthway, Medical City, Uzima 00100, Nairobi, Kenya.
+                123 Healthway, Nairobi, Kenya.
               </p>
               <a
                 href="tel:+254712345678"
@@ -134,6 +132,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
         {/* Copyright Bar */}
         <div className="mt-12 pt-6 border-t border-gray-700/50 text-xs sm:text-sm text-gray-500 text-center">
           <p>

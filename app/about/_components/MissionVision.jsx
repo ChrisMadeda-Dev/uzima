@@ -36,7 +36,7 @@ const MissionVision = () => {
           viewport={fadeInUpVariants.viewport}
           transition={fadeInUpVariants.transition}
         >
-          Our Guiding Principles
+          Our Principles
         </motion.h2>
 
         {/* Main Content Layout: Two Rows */}

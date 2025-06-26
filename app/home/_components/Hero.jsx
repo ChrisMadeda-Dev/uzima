@@ -31,12 +31,11 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="text-lg sm:text-xl md:text-2xl text-white opacity-90 max-w-3xl mx-auto mb-10 drop-shadow-md"
         >
-          Providing compassionate and comprehensive healthcare to our community,
-          ensuring well-being with every step.
+          Providing compassionate and comprehensive healthcare to our community.
         </motion.p>
 
         <motion.a
-          href="#how-to-book"
+          href="/contact"
           initial={{ opacity: 0, y: 30 }} // Initial state for animation
           animate={{ opacity: 1, y: 0 }} // Animate state for animation
           transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }} // Delay to appear after text
