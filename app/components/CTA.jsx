@@ -27,7 +27,7 @@ const CTA = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-blue-600">
+    <section className="py-16 md:py-24 bg-blue-700">
       <div className="container mx-auto px-4">
         <motion.div
           variants={containerVariants}

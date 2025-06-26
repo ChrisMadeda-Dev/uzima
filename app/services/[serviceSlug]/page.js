@@ -55,7 +55,7 @@ const ServiceDetail = () => {
       <div className="container mx-auto px-4">
         {/* Service Name Title */}
         <motion.h1
-          className="text-center text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 md:mb-24"
+          className="  h-[20svh] text-center text-4xl md:text-5xl font-extrabold text-gray-900"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}

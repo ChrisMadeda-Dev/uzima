@@ -8,10 +8,10 @@ const Hero = () => {
   return (
     <div
       className="w-full relative overflow-hidden flex items-center justify-center
-                   h-[90svh] bg-cover bg-top max-sm:bg-center
-                   shadow-2xl
-                   "
-      style={{ backgroundImage: "url('/images/d1.jpg')" }} // Background image source
+                 h-[90svh] bg-cover shadow-2xl
+                 bg-[url('/images/bg7.jpg')] bg-top     // Mobile default: bg7.jpg, aligned to top
+                 sm:bg-[url('/images/bg7.jpg')] sm:bg-top   // Desktop: bg7.jpg, aligned to top
+                 "
     >
       <div className="container mx-auto px-6 text-center z-10">
         <motion.h1
@@ -22,7 +22,7 @@ const Hero = () => {
         >
           Uzima Hospital
           <br />
-          Your Health, Our Priority
+          Your Health, Our Priority.
         </motion.h1>
 
         <motion.p
@@ -37,27 +37,30 @@ const Hero = () => {
 
         <motion.a
           href="#how-to-book"
+          initial={{ opacity: 0, y: 30 }} // Initial state for animation
+          animate={{ opacity: 1, y: 0 }} // Animate state for animation
+          transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }} // Delay to appear after text
           whileHover={{
             scale: 1.05,
+            y: -4, // Added y-axis lift on hover, replacing CSS transform
             backgroundColor: "#1D4ED8", // Changed hover background to blue-700 (#1D4ED8)
             boxShadow:
-              "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+              "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.04)",
           }}
           whileTap={{ scale: 0.98 }}
-          transition={{ duration: 0.2 }}
-          className="inline-flex items-center justify-center text-white bg-blue-600 font-bold
+          // Removed conflicting CSS transition-all and transform hover classes
+          className="inline-flex items-center justify-center text-white bg-blue-500 font-bold
                      py-4 px-10 md:py-5 md:px-12
                      rounded-full shadow-xl
-                     transition-all duration-300 ease-in-out
-                     text-lg md:text-xl transform hover:-translate-y-0.5"
+                     text-lg md:text-xl"
         >
           Book an Appointment <FaArrowRight className="ml-2" />{" "}
           {/* Added arrow icon with margin */}
         </motion.a>
       </div>
 
-      {/* Blue overlay with 70% opacity added above the background image */}
-      <div className="absolute inset-0 bg-black opacity-47 pointer-events-none"></div>
+      {/* Blue overlay with increased opacity to separate text from background */}
+      <div className="absolute inset-0 bg-black opacity-50 pointer-events-none"></div>
     </div>
   );
 };

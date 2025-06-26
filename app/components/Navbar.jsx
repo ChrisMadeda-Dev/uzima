@@ -1,7 +1,7 @@
 // components/Navbar.jsx
 "use client"; // This directive is necessary for client-side features like framer-motion and useState
 
-import React, { useState } from "react";
+import React, { useState } from "react"; // CORRECTED LINE HERE
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa"; // Importing icons for the mobile menu
 import Link from "next/link"; // Import Link for Next.js page navigation
@@ -32,28 +32,28 @@ const Navbar = () => {
   const mobileMenuVariants = {
     hidden: {
       opacity: 0,
-      y: "-100%", // Start from above the viewport
+      x: "100%", // Start from right of the viewport
       transition: { duration: 0.3, ease: "easeOut" },
     },
     visible: {
       opacity: 1,
-      y: 0, // Animate to cover the screen
+      x: 0, // Animate to cover the screen
       transition: { duration: 0.3, ease: "easeOut" },
     },
     exit: {
       opacity: 0,
-      y: "-100%", // Exit upwards
+      x: "100%", // Exit to the right
       transition: { duration: 0.3, ease: "easeOut" },
     },
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-blue-600 shadow-lg py-4 px-6 md:px-8 lg:px-10">
+    <header className="sticky top-0 z-50 bg-blue-700 shadow-lg py-4 px-6 md:px-8 lg:px-10">
       <div className="container mx-auto flex items-center justify-between">
         {/* Hospital Logo/Name */}
         <Link
           href="/home"
-          className="text-3xl md:text-4xl font-bold text-white rounded-lg
+          className="text-3xl md:text-4xl text-white rounded-lg
                          transition-colors duration-200 p-2
                          hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
         >
@@ -74,17 +74,17 @@ const Navbar = () => {
                 {link.type === "button" ? (
                   <Link
                     href={link.href}
-                    className="inline-block mx-4 py-2 px-4 rounded-full
-                                 bg-blue-700 text-white font-semibold
+                    className="inline-block mx-4 py-2 px-4 rounded-full font-semibold
+                                 bg-blue-500 text-white
                                  transition-colors duration-200
-                                 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                                 hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                   >
                     {link.name}
                   </Link>
                 ) : (
                   <Link
                     href={link.href}
-                    className="text-white font-semibold py-2 px-3 rounded-lg
+                    className="text-white py-2 px-3 rounded-lg
                                  transition-all duration-200
                                  hover:text-blue-200 hover:bg-blue-600/50
                                  focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
@@ -113,7 +113,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            className="md:hidden fixed inset-0 bg-blue-600 z-[999] flex flex-col items-start justify-center p-8" // Changed items-center to items-start for left alignment of the whole block
+            className="md:hidden fixed inset-0 bg-blue-700 z-[999] flex flex-col items-start justify-center p-8"
             initial="hidden"
             animate="visible"
             exit="exit"
@@ -123,9 +123,9 @@ const Navbar = () => {
             <Link
               href="/home"
               onClick={handleLinkClick} // Close menu when title is clicked
-              className="absolute top-4 left-4 text-3xl font-bold text-white rounded-lg
+              className="absolute top-4 left-4 text-3xl  text-white rounded-lg
                          transition-colors duration-200 p-2
-                         focus:outline-none focus:ring-2 focus:ring-blue-300 z-10" // Ensure it's above other elements
+                         focus:outline-none focus:ring-2 focus:ring-blue-300 z-10"
             >
               Uzima Hospital
             </Link>
@@ -143,12 +143,8 @@ const Navbar = () => {
 
             {/* Mobile Menu Links */}
             <ul className="flex flex-col space-y-6 mt-20 w-full items-start">
-              {" "}
-              {/* Removed justify-center here, added items-start */}
               {navLinks.map((link) => (
                 <li key={link.name} className="w-full">
-                  {" "}
-                  {/* Removed flex justify-center from list items */}
                   {link.type === "button" ? (
                     <Link
                       href={link.href}
@@ -164,7 +160,7 @@ const Navbar = () => {
                     <Link
                       href={link.href}
                       onClick={handleLinkClick}
-                      className="block p-3 text-white text-xl font-semibold rounded-lg text-left
+                      className="block p-3 text-white text-xl rounded-lg text-left
                                  transition-colors duration-200
                                  hover:bg-blue-700 hover:text-white
                                  focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
