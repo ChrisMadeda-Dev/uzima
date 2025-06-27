@@ -75,8 +75,8 @@ const ServicesHighlights = () => {
                 ease: "easeOut",
               }} // Staggered delay
               className="bg-white p-6 rounded-lg shadow-lg text-center border border-gray-100 flex flex-col items-center
-                         transition-all duration-300 ease-in-out // For smoother transitions between states
-                         hover:shadow-xl hover:ring-2 hover:ring-blue-200" // Improved hover effect with ring
+                          transition-all duration-300 ease-in-out // For smoother transitions between states
+                          hover:shadow-xl hover:ring-2 hover:ring-blue-200" // Improved hover effect with ring
               whileHover={{
                 scale: 1.03, // Creative motion: slightly increased scale
                 y: -7, // Creative motion: increased upward float
@@ -103,15 +103,25 @@ const ServicesHighlights = () => {
           ))}
         </div>
 
-        {/* View All Services Link (now a text link) */}
-        <div className="text-center mt-12 md:mt-16">
+        {/* View All Services Link (now animated with Framer Motion) */}
+        <motion.div
+          className="text-center mt-12 md:mt-16"
+          initial={{ opacity: 0, y: 30 }} // Start invisible and slightly below
+          whileInView={{ opacity: 1, y: 0 }} // Animate to visible and correct position
+          viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
+          transition={{
+            duration: 0.6, // Match card duration
+            delay: services.length * 0.1 + 0.2, // Calculated to start after last card's animation begins, plus a buffer
+            ease: "easeOut",
+          }}
+        >
           <Link
             href="/services" // Link to the main services page
             className="text-lg md:text-xl font-semibold text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200"
           >
             View All Services &rarr;
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
