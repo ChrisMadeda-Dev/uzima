@@ -7,25 +7,25 @@ const leadershipMembers = [
   {
     name: "Dr. Anya Sharma",
     title: "Chief Executive Officer",
-    photo: "/images/dp.jpg", // Changed to dp.jpg
+    photo: "/images/dp.webp", // Changed to dp.jpg
     bio: "Dr. Sharma has over 20 years of experience in healthcare administration and is passionate about patient advocacy and innovative medical practices. Her leadership drives Uzima's commitment to excellence.",
   },
   {
     name: "Prof. Ben Carter",
     title: "Chief Medical Officer",
-    photo: "/images/dp.jpg", // Changed to dp.jpg
+    photo: "/images/dp.webp", // Changed to dp.jpg
     bio: "Prof. Carter is a renowned surgeon and clinical leader, dedicated to advancing medical research and ensuring the highest standards of clinical care across all departments.",
   },
   {
     name: "Ms. Carol Kimani",
     title: "Chief Operating Officer",
-    photo: "/images/dp.jpg", // Changed to dp.jpg
+    photo: "/images/dp.webp", // Changed to dp.jpg
     bio: "Ms. Kimani brings extensive experience in operational efficiency and strategic planning, ensuring Uzima Hospital runs smoothly and effectively to serve our patients.",
   },
   {
     name: "Dr. David Mumo",
     title: "Head of Nursing",
-    photo: "/images/dp.jpg", // Changed to dp.jpg
+    photo: "/images/dp.webp", // Changed to dp.jpg
     bio: "Dr. Mumo leads our dedicated nursing team, fostering a culture of compassionate care and continuous professional development for all nursing staff.",
   },
 ];

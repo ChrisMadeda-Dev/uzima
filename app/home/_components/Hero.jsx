@@ -9,8 +9,8 @@ const Hero = () => {
     <div
       className="w-full relative overflow-hidden flex items-center justify-center
                  h-[90svh] bg-cover shadow-2xl
-                 bg-[url('/images/bg7.jpg')] bg-top     // Mobile default: bg7.jpg, aligned to top
-                 sm:bg-[url('/images/bg7.jpg')] sm:bg-top   // Desktop: bg7.jpg, aligned to top
+                 bg-[url('/images/bg7.webp')] bg-top     // Mobile default: bg7.jpg, aligned to top
+                 sm:bg-[url('/images/bg7.webp')] sm:bg-top   // Desktop: bg7.jpg, aligned to top
                  "
     >
       <div className="container mx-auto px-6 text-center z-10">
@@ -20,9 +20,7 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-none mb-6 drop-shadow-lg"
         >
-          Uzima Hospital
-          <br />
-          Your Health, Our Priority.
+          Your Wellbeing, <br /> Our Heartfelt Dedication.
         </motion.h1>
 
         <motion.p
@@ -48,7 +46,7 @@ const Hero = () => {
           }}
           whileTap={{ scale: 0.98 }}
           // Removed conflicting CSS transition-all and transform hover classes
-          className="inline-flex items-center justify-center text-white bg-blue-500 font-bold
+          className="inline-flex items-center justify-center text-white bg-blue-700 font-bold
                      py-4 px-10 md:py-5 md:px-12
                      rounded-full shadow-xl
                      text-lg md:text-xl"
@@ -59,7 +57,7 @@ const Hero = () => {
       </div>
 
       {/* Blue overlay with increased opacity to separate text from background */}
-      <div className="absolute inset-0 bg-black opacity-50 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-blue-700 opacity-57 pointer-events-none"></div>
     </div>
   );
 };

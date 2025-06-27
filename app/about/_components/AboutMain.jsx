@@ -54,7 +54,7 @@ const AboutMain = () => {
             transition={{ ...fadeInVariants.transition, delay: 0.4 }} // Added delay for the first image
           >
             <img
-              src="/images/b1.jpg"
+              src="/images/b1.webp"
               alt="Uzima Hospital Building"
               className="w-full h-64 md:h-80 object-cover object-top rounded-lg shadow-md"
             />
@@ -68,7 +68,7 @@ const AboutMain = () => {
             transition={{ ...fadeInVariants.transition, delay: 0.6 }} // Added delay for the second image
           >
             <img
-              src="/images/s2.jpg"
+              src="/images/s2.webp"
               alt="Caring Medical Staff"
               className="w-full h-64 md:h-80 object-cover rounded-lg shadow-md"
             />

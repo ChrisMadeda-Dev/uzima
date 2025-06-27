@@ -7,19 +7,19 @@
 const KeyFeatures = () => {
   const features = [
     {
-      image: "/images/2.jpg", // All images now use this path
+      image: "/images/2.webp", // All images now use this path
       title: "Uncompromising Quality",
       description:
         "Leveraging state-of-the-art facilities and a team of experienced medical professionals to deliver superior care.",
     },
     {
-      image: "/images/s1.jpg", // All images now use this path
+      image: "/images/s1.webp", // All images now use this path
       title: "Genuine Compassion",
       description:
         "Our patient-centered approach ensures your comfort and recovery are at the heart of everything we do.",
     },
     {
-      image: "/images/8.jpg", // All images now use this path
+      image: "/images/8.webp", // All images now use this path
       title: "Pioneering Technology",
       description:
         "Utilizing the latest innovations for accurate diagnosis, effective treatment, and improved patient outcomes.",
